@@ -15,11 +15,12 @@ It lets you quickly see what it looks like, including when it's styled with a my
 1. Clone the project (`git clone git@github.com:JustinAiken/my_timeline-demo.git`)
 2. Bundle the gems (`cd my_timeline-demo && bundle install`)
 3. Prepare the database (`db:create && db:migrate && db:seed`)
-4. Start the rails server (`rails s`)
-5. Visit [the website](http://127.0.0.1:3000) in a browser
-6. Login with the user created during the seed step
-7. ???
-8. Profit!
+4. Put in your own keys in [`config/initializers/my_timeline.rb`](config/initializers/my_timeline.rb)
+5. Start the rails server (`rails s`)
+6. Visit [the website](http://127.0.0.1:3000) in a browser
+7. Login with the user created during the seed step
+8. ???
+9. Profit!
 
 ## Credits
 
