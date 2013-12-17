@@ -1,0 +1,20 @@
+/*
+=require twitter-bootstrap-static/bootstrap
+
+require bootswatch/cerulean
+
+require twitter-bootstrap-static/sprites
+=require twitter-bootstrap-static/fontawesome
+*/
+
+select.date-select {
+    width:auto;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+
+select.datetime_select {
+    width:auto;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}

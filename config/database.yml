@@ -1,0 +1,10 @@
+test:
+  adapter: mysql2
+  database: timeline_test
+  username: root
+  password:
+development:
+  adapter: mysql2
+  database: timeline_dev
+  username: root
+  password:

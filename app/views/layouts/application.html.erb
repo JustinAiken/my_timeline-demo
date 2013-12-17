@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+  <head>
+    <title> Timeline</title>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= stylesheet_link_tag "bootswatch/#{$current_theme}", media: "all" %>
+    <%= javascript_include_tag "application" %>
+  </head>
+
+  <body>
+    <%= nav_bar brand: "My Timeline Demo-App", responsive: true do %>
+      <%= menu_group pull: :center do %>
+        <%= menu_item "Home", "/" %>
+        <% if current_user %>
+          <%= menu_item "My Timeline", "/users/#{current_user.id}/timeline/" %>
+          <%= menu_item "Settings",    "/users/#{current_user.id}/timeline/control_panel" %>
+        <% end %>
+        <%= menu_divider %>
+        <%= drop_down "Theme" do %>
+          <%= menu_item "Amelia"   , "/home/theme/amelia" %>
+          <%= menu_item "Cerulean" , "/home/theme/cerulean" %>
+          <%= menu_item "Cosmo"    , "/home/theme/cosmo" %>
+          <%= menu_item "Cyborg"   , "/home/theme/cyborg" %>
+          <%= menu_item "Flatly"   , "/home/theme/flatly" %>
+          <%= menu_item "Journal"  , "/home/theme/journal" %>
+          <%= menu_item "Readable" , "/home/theme/readable" %>
+          <%= menu_item "Simplex"  , "/home/theme/simplex" %>
+          <%= menu_item "Slate"    , "/home/theme/slate" %>
+          <%= menu_item "Spacelab" , "/home/theme/spacelab" %>
+          <%= menu_item "Superhero", "/home/theme/superhero" %>
+          <%= menu_item "United"   , "/home/theme/united" %>
+          <%= menu_item "None"     , '/home/theme/nil' %>
+        <% end %>
+
+        <%= menu_item "#{User.first.first_name}'s Timeline", "/users/1/timeline/" %>
+      <% end %>
+      <%= menu_group pull: :right do %>
+        <% if current_user %>
+            <%= menu_item "Log Out", destroy_user_session_path, method: :delete %>
+        <% else %>
+           <%= menu_item "Log In" , new_user_session_path %>
+           <%= menu_item "Sign Up", new_user_registration_path %>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span10">
+          <%= bootstrap_flash %>
+          <%= yield %>
+        </div>
+      </div>
+      <footer></footer>
+    </div>
+  </body>
+</html>
