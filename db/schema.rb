@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131117001910) do
+ActiveRecord::Schema.define(:version => 20131222121619) do
 
   create_table "my_timeline_events", :force => true do |t|
     t.text     "description"
@@ -62,6 +62,15 @@ ActiveRecord::Schema.define(:version => 20131117001910) do
   end
 
   add_index "my_timeline_settings", ["target_type", "target_id", "var"], :name => "index_my_timeline_settings_on_target_type_and_target_id_and_var", :unique => true
+
+  create_table "my_timeline_twitter_tweets", :force => true do |t|
+    t.datetime "happened_on"
+    t.text     "uri"
+    t.text     "post"
+    t.integer  "event_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.datetime "created_at",                             :null => false

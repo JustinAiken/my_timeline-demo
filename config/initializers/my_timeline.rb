@@ -16,6 +16,13 @@ MyTimeline.setup do |config|
 end
 
 MyTimeline::HealthGraph.setup do |config|
-  config.client_id     = "GETYOUROWN"
-  config.client_secret = "GETYOUROWN"
+  config.client_id     = "GET YOUR OWN"
+  config.client_secret = "GET YOUR OWN"
+end
+
+MyTimeline::Twitter.setup do |config|
+  config.consumer_key        = "GET YOUR OWN"
+  config.consumer_secret     = "GET YOUR OWN"
+  config.access_token        = "GET YOUR OWN"
+  config.access_token_secret = "GET YOUR OWN"
 end
