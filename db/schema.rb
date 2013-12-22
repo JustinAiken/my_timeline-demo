@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131222121619) do
+ActiveRecord::Schema.define(:version => 20131222224425) do
 
   create_table "my_timeline_events", :force => true do |t|
     t.text     "description"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(:version => 20131222121619) do
     t.string   "linkable_type"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
+  end
+
+  create_table "my_timeline_github_fork_events", :force => true do |t|
+    t.datetime "happened_on"
+    t.string   "original_id"
+    t.string   "repo"
+    t.integer  "event_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "my_timeline_health_graph_cardio_activities", :force => true do |t|

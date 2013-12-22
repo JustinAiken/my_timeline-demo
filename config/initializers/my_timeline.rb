@@ -26,3 +26,8 @@ MyTimeline::Twitter.setup do |config|
   config.access_token        = "GET YOUR OWN"
   config.access_token_secret = "GET YOUR OWN"
 end
+
+MyTimeline::Github.setup do |config|
+  config.client_id     = "GET YOUR OWN"
+  config.client_secret = "GET YOUR OWN"
+end
