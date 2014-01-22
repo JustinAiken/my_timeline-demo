@@ -7,10 +7,10 @@ gem 'devise'
 gem 'thin'
 
 #My Timeline and My Timeline addons
-gem 'my_timeline',              github: "JustinAiken/my_timeline"
-gem 'my_timeline-health_graph', github: "JustinAiken/my_timeline-health_graph"
-gem 'my_timeline-twitter'     , github: "JustinAiken/my_timeline-twitter"
-gem 'my_timeline-github'      , github: "JustinAiken/my_timeline-github"
+gem 'my_timeline'
+gem 'my_timeline-health_graph'
+gem 'my_timeline-twitter'
+gem 'my_timeline-github'
 
 #Gems needed by My Timeline Addons
 gem 'health_graph', git: 'git://github.com/jupp0r/health_graph.git'
@@ -30,3 +30,4 @@ group :development do
 end
 
 gem 'jquery-rails'
+
